@@ -9,15 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json(); // Convertir respuesta en JSON
         })
         .then(users => {
-            // Mapear los usuarios y añadir las nuevas propiedades
-            const userCopy = users.map(user => {
-                return {
-                    ...user,  // Mantener todas las propiedades originales del usuario
-                    age: Math.floor(Math.random() * 100) + 1,  // Añadir la edad aleatoria
-                    img: user.id  // Usar el id del usuario como imagen
-                };
+            const userCopy = [];
+
+            users.forEach(user => {
+                userCopy.push({
+                    ...user,  
+                    age: Math.floor(Math.random() * 100) + 1,  
+                    img: user.id
+                });
             });
-            
+
             // Recorremos el array de usuarios
             userCopy.forEach(user => {
                 const { name, age, username, img, phone, email, company, address } = user;
