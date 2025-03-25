@@ -14,15 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
             users.forEach(user => {
                 userCopy.push({
                     ...user,  
-                    age: Math.floor(Math.random() * 100) + 1,  
-                    img: user.id
+                    age:Math.floor(Math.random() * (100 - 18 + 1)) + 18, 
+                    address: `${user.address.street} , ${user.address.suite} , ${user.address.city}`
                 });
             });
 
             // Recorremos el array de usuarios
             userCopy.forEach(user => {
-                const { name, age, username, img, phone, email, company, address } = user;
-                console.log({ name, age, username, img, phone, email, company, address });
+                const { name, age, username, phone, email, company, address } = user;
+                //console.log({ name, age, username, img, phone, email, company, address });
 
                 // Creamos un bloque HTML para mostrar cada usuario
                 const userCard = document.createElement('div');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 userCard.innerHTML = `
                 <div id=cajaficha>
                     <div id=cajaImg>
-                        <li><img src="../assets/img/${img}.jpeg" alt="Imagen de ${name}" /></li>
+                        <li><img src="../assets/img/${user.id}.jpeg" alt="Imagen de ${name}" /></li>
                     </div>
                     <div id="flashCard">
                         <li><strong>Nombre:</strong>${name}</li>
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div id=baja>
                     <li><strong>Empresa:</strong> ${company.name}</li>
-                    <li><strong>Dirección:</strong> ${address.street}, ${address.suite}, ${address.city}</li>
+                    <li><strong>Dirección:</strong> ${address}</li>
                     </div>
                 </div>
                     
