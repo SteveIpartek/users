@@ -52,6 +52,15 @@ height: 115px;
 
 }
 
+#flashCard{
+
+  border-radius: 10px;
+  border:1px solid black;
+  width: 315px;
+  padding: 5px;
+  
+  }
+
 li{
 
   list-style-type: none;
@@ -60,19 +69,6 @@ li{
 }
 
 
-
-
-#flashCard{
-
-border-radius: 10px;
-border:1px solid black;
-width: 315px;
-padding: 5px;
-
-
-
-  
-}
 
 #baja{
   background-color: blue;
