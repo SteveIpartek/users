@@ -11,3 +11,73 @@ h1 {
 }
 
 
+ul{
+
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+list-style-type: none;
+padding: 0px;
+
+  
+  
+  }
+
+#cajaficha{
+    background-color: red;
+    width: 450px;
+    height: 207.5px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    border:1px solid black;
+    font-size: 19.5px;
+    
+   }
+
+
+#cajaImg{
+ 
+  width: 100px;
+  float: right;
+  
+}
+
+
+img{
+
+width: 100px;
+height: 115px;
+
+
+}
+
+li{
+
+  list-style-type: none;
+  overflow-wrap: break-word;
+  
+}
+
+
+
+
+#flashCard{
+
+border-radius: 10px;
+border:1px solid black;
+width: 315px;
+padding: 5px;
+
+
+
+  
+}
+
+#baja{
+  background-color: blue;
+  margin-top: 10px;
+ 
+  
+}
+
